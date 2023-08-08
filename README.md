@@ -31,10 +31,10 @@ Note that we setup the login cookie to never expire, so once you've entered a pa
 
 
 
-## Dockerfiles
+## `Dockerfile`
 
 Because singularity files are more-or-less un-writable, it's difficult to install system libraries on the fly.
 Things like libharfbuzz and libssl are common problems.
 
-The containers in here just have a bunch of these C development libraries already installed so that you don't have to worry about it so much.
+This container just has a bunch of these C development libraries already installed so that you don't have to worry about it so much.
 I'll update it as I encounter new things.
