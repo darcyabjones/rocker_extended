@@ -1,0 +1,35 @@
+FROM rocker/tidyverse:4.3.1
+
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       libcurl4-gnutls-dev \
+       libssl-dev \
+       cmake \
+       build-essential \
+       libboost-all-dev \
+       libpython3-dev \
+       libharfbuzz-dev \
+       libxml2-dev \
+       libfontconfig1-dev \
+       libfribidi-dev \
+       libtiff-dev \
+       libhts-dev \
+       samtools \
+       bcftools \
+       pandoc \
+       libfreetype-dev \
+       liblzma-dev \
+       zip unzip \
+       dos2unix \
+       libicu-dev \
+       libglpk-dev \
+       libgmp3-dev \
+       zlib1g-dev \
+       libbz2-dev \
+       libhdf5-dev \
+       libxt-dev libx11-dev \
+       libcairo2-dev \
+       libpng-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && R -q -e 'install.packages(c("curl", "BiocManager"))'
