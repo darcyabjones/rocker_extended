@@ -1,4 +1,4 @@
-FROM rocker/tidyverse:4.3.1
+FROM rocker/tidyverse:4.3.2
 
 
 RUN apt-get update \
@@ -15,6 +15,8 @@ RUN apt-get update \
        libfribidi-dev \
        libtiff-dev \
        libhts-dev \
+       libfftw3-dev \
+       librsvg2-dev \
        samtools \
        bcftools \
        pandoc \
