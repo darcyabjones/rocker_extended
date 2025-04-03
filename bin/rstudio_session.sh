@@ -67,7 +67,7 @@ then
 fi
 
 
-if [ -z "${SESSIONDIR}" & -z "${SESSIONDIR_}"]
+if [ -z "${SESSIONDIR}" & -z "${SESSIONDIR_}" ]
 then
     echo "ERROR: please either specify a --session-dir to store the files necessary for rstudio on apptainer/singularity." 1>&2
     echo "       OR specify a base directory to store all sessions with the RSTUDIO_APPTAINER_DEFAULT_SESSIONDIR environment variable." 1>&2
