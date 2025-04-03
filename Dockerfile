@@ -1,4 +1,4 @@
-FROM rocker/tidyverse:4.3.2
+FROM rocker/tidyverse:4.4
 
 
 RUN apt-get update \
@@ -7,6 +7,8 @@ RUN apt-get update \
        libssl-dev \
        cmake \
        build-essential \
+       python3-venv \
+       python3-pip \
        libboost-all-dev \
        libpython3-dev \
        libharfbuzz-dev \
@@ -34,4 +36,4 @@ RUN apt-get update \
        libcairo2-dev \
        libpng-dev \
     && rm -rf /var/lib/apt/lists/* \
-    && R -q -e 'install.packages(c("curl", "BiocManager"))'
+    && R -q -e 'install.packages(c("curl", "BiocManager", "RhpcBLASctl"))'
