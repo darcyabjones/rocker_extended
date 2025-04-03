@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build ./dockerfiles --file dockerfiles/tidyverse_extended.Dockerfile --tag tidyverse_extended:$(date +%s)
+      run: docker build --file Dockerfile --tag "rocker_extended:$(date +%Y%m%d)" .
