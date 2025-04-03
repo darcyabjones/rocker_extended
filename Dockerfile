@@ -3,7 +3,7 @@ FROM rocker/tidyverse:4.4
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-       libcurl4-gnutls-dev \
+       libcurl4-openssl-dev \
        libssl-dev \
        cmake \
        build-essential \
