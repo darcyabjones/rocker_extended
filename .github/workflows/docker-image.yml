@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
 
 env:
-  IMAGE_NAME: ${{ env.REPO_NAME }}
+  IMAGE_NAME: rocker_extended
 
 jobs:
   push_to_registry:
